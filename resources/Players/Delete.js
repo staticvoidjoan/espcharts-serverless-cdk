@@ -1,6 +1,5 @@
 const connectDatabase = require("../database/dbConfig");
 const Player = require("../models/Player");
-
 module.exports.handler = async (event, context) => {
   try {
     await connectDatabase();

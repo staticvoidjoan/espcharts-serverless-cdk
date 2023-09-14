@@ -1,5 +1,5 @@
-const connectDatabase = require('../../database/dbConfig');
-const Player = require('../../models/Player');
+const connectDatabase = require('../database/dbConfig');
+const Team = require('../models/Team');
 
 module.exports.handler = async (event, context) => {
   context.callbackWaitsForEmptyEventLoop = false;
@@ -53,7 +53,7 @@ module.exports.handler = async (event, context) => {
     }
   }    
     const updatedTeamData = JSON.parse(event.body);
-    const updatedTeam = await Player.findByIdAndUpdate(teamId, updatedTeamData, {
+    const updatedTeam = await Team.findByIdAndUpdate(teamId, updatedTeamData, {
       new: true, // This option returns the updated document
     });
 

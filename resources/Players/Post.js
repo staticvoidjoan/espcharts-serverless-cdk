@@ -1,6 +1,5 @@
-const connectDatabase = require("../../database/dbConfig");
-const Player = require("../../models/Player");
-const countries = require("iso-3166-1");
+const connectDatabase = require("../database/dbConfig");
+const Player = require("../models/Player");
 const axios = require("axios");
 
 module.exports.handler = async (event, context) => {

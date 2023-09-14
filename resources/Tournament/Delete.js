@@ -1,5 +1,5 @@
-const connectDatabase = require('../../database/dbConfig');
-const Tournament = require('../../models/Tournament');
+const connectDatabase = require('../database/dbConfig');
+const Tournament = require('../models/Tournament');
 
 module.exports.handler = async (event, context) => {
   try {

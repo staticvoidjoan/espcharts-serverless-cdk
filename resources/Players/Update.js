@@ -1,6 +1,5 @@
-const mongoose = require("mongoose");
-const connectDatabase = require("../../database/dbConfig");
-const Player = require("../../models/Player");
+const connectDatabase = require("../database/dbConfig");
+const Player = require("../models/Player");
 const axios = require("axios");
 module.exports.handler = async (event, context) => {
   context.callbackWaitsForEmptyEventLoop = false;

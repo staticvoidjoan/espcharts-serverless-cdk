@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
-const connectDatabase = require("../../database/dbConfig");
-const Player = require("../../models/Player");
+const connectDatabase = require('../database/dbConfig');
+const Tournament = require('../models/Tournament');
+
 
 
 module.exports.handler = async (event, context) => {
@@ -40,7 +41,7 @@ module.exports.handler = async (event, context) => {
       }
     }
 
-    tournamentObj = await Player.create(JSON.parse(event.body));
+    tournamentObj = await Tournament.create(JSON.parse(event.body));
     return {
       statusCode: 201,
       headers: {

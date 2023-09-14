@@ -1,5 +1,6 @@
-const connectDatabase = require('../../database/dbConfig');
-const  Team = require('../../models/Team');
+const connectDatabase = require('../database/dbConfig');
+const Team = require('../models/Team');
+
 
 module.exports.handler = async (event, context) => {
   context.callbackWaitsForEmptyEventLoop = false;
@@ -17,7 +18,7 @@ module.exports.handler = async (event, context) => {
     if (teams.length === 0) {
       return {
         statusCode: 404,
-        body: JSON.stringify({ message: "No players have been added to the database" }),
+        body: JSON.stringify({ message: "No teams have been added to the database" }),
       };
     }
 

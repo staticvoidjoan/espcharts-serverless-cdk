@@ -1,5 +1,5 @@
-const connectDatabase = require('../../database/dbConfig');
-const Team = require('../../models/Team');
+const connectDatabase = require('../database/dbConfig');
+const Team = require('../models/Team');
 
 module.exports.handler = async (event, context) => {
   try {

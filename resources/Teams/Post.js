@@ -1,6 +1,5 @@
-const mongoose = require("mongoose");
-const connectDatabase = require("../../database/dbConfig");
-const Team = require("../../models/Team");
+const connectDatabase = require('../database/dbConfig');
+const Team = require('../models/Team');
 const axios = require("axios");
 
 module.exports.handler = async (event, context) => {
